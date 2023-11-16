@@ -88,7 +88,7 @@ int main(void)
                 OCR2A = (TIMER_CLK / IRQ_FREQ) - 1;// seta o registrador output compare
                 // liga modo CTC
                 TCCR2A |= (1 << WGM21);
-                // seta CS10 e CS12 para prescaler 1024
+                // seta CS22, CS21 e CS20 para prescaler 1024
                 TCCR2B |= (1 << CS22) | (1 << CS21) | (1 << CS20);
                 TIMSK2 |= (1 << OCIE2A);    // habilita máscara do timer2
                 pausa = 0;
